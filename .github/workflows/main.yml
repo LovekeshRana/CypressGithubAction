@@ -13,4 +13,9 @@ jobs:
         with:
           start: npm start
           browser: chrome
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
           
