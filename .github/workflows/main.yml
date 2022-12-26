@@ -8,9 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          working-directory: Angular Project
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.2
         with:
+          working-directory: Angular Project
           start: npm start
           browser: chrome
       - uses: actions/upload-artifact@v3
