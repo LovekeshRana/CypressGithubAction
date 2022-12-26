@@ -13,7 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.2
         with:
-          path: Angular Project
+          working-directory: Angular Project
           start: npm start
           browser: chrome
       - uses: actions/upload-artifact@v3
